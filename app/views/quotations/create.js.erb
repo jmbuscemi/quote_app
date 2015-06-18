@@ -1,6 +1,7 @@
-$("#new-form-container").fadeOut();
+var time = 10000
+$("#new-form-container").fadeOut(time);
 setTimeout(function() {
   $("#new-form-container").html("");
-  $("#all-quotations").append("<%= j(render partial: 'quotation', locals: {quotation: @quotation}) %>");
+  $("#all-quotations").append("<%= j(render @quotation) %>");
   $("#new-form-container").fadeIn();
-}, 400);
+}, time);
