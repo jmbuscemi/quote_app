@@ -1,0 +1,7 @@
+<h1>Say something memorable!</h1>
+
+<%= form_for @quotation, remote: true do |f| %>
+  Quotation: <%= f.text_field :quotation %><br />
+  Author: <%= f.text_field :author %><br />
+  <%= f.submit %>
+<% end %>

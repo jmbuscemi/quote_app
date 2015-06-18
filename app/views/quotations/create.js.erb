@@ -1,0 +1,6 @@
+$("#new-form-container").fadeOut();
+setTimeout(function() {
+  $("#new-form-container").html("");
+  $("#all-quotations").append("<%= j(render partial: 'quotation', locals: {quotation: @quotation}) %>");
+  $("#new-form-container").fadeIn();
+}, 400);

@@ -1,0 +1,15 @@
+<h1>Cohort 4 Rails Quotations</h1>
+
+<div id="all-quotations">
+  <% @quotations.each do |q| %>
+    <%= render partial: "quotation", locals: {quotation: q} %>
+  <% end %>
+</div>
+
+
+
+<div id="new-form-container">
+</div>
+
+
+<%= link_to "New Quotation", new_quotation_path, remote: true %>
